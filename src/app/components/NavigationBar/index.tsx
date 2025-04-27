@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import Image from "next/image";
 import {
     Select,
     SelectTrigger,
@@ -21,18 +22,14 @@ import {
     NavigationMenuContent,
     NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { SelectPortal, SelectViewport } from "@radix-ui/react-select";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { toast } from "sonner"
 import {
     Form,
-    FormControl,
-    FormDescription,
     FormField,
     FormItem,
-    FormLabel,
     FormMessage,
 } from "@/components/ui/form"
 import Link from "next/link";
@@ -321,10 +318,12 @@ const NavigationBar: React.FC = () => {
                                             hover:border-(--primary)
                                             [transition:all_0.3s_ease-in-out]"
                                     >
-                                        <img
+                                        <Image
                                             alt={item.label}
                                             src={`${BASE_URL}${item.imgSrc}`}
                                             className=""
+                                            width={200}
+                                            height={200}
                                         />
                                         <div
                                             className="demo-label
@@ -505,10 +504,12 @@ const NavigationBar: React.FC = () => {
                             {demoItems.map((item) => (
                                 <Card key={item.href} className="w-36">
                                     <a href={item.href} className="block text-center">
-                                        <img
+                                        <Image
                                             alt={item.label}
                                             src={`${BASE_URL}${item.imgSrc}`}
                                             className="h-40 w-full object-cover rounded-md"
+                                            width={144}
+                                            height={144}
                                         />
                                         <div className="mt-2 text-sm">{item.label}</div>
                                     </a>
@@ -589,10 +590,12 @@ const NavigationBar: React.FC = () => {
                             {demoItems.map((item) => (
                                 <Card key={item.href} className="w-36">
                                     <a href={item.href} className="block text-center">
-                                        <img
+                                        <Image
                                             alt={item.label}
                                             src={`${BASE_URL}${item.imgSrc}`}
                                             className="h-40 w-full object-cover rounded-md"
+                                            width={144}
+                                            height={144}
                                         />
                                         <div className="mt-2 text-sm">{item.label}</div>
                                     </a>
@@ -660,10 +663,12 @@ const NavigationBar: React.FC = () => {
                             {demoItems.map((item) => (
                                 <Card key={item.href} className="w-36">
                                     <a href={item.href} className="block text-center">
-                                        <img
+                                        <Image
                                             alt={item.label}
                                             src={`${BASE_URL}${item.imgSrc}`}
                                             className="h-40 w-full object-cover rounded-md"
+                                            width={144}
+                                            height={144}
                                         />
                                         <div className="mt-2 text-sm">{item.label}</div>
                                     </a>
