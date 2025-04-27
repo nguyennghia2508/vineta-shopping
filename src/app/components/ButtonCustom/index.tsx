@@ -1,27 +1,28 @@
 "use client";
 
 import React from "react";
-import { Carousel } from "antd";
 import { Button } from "@/components/ui/button";
-import { ChevronRightIcon } from "lucide-react";
 
 interface ButtonProps {
     className: string,
-    text: string,
-    isArrow: Boolean,
-    children: React.ReactElement<any, any>,
+    text?: string,
+    isArrow?: Boolean,
+    children?: React.ReactElement<any, any> | string,
+    onClick?: () => void,
 }
 
 const ButtonCustom: React.FC<ButtonProps> = ({
     className,
     text,
     isArrow = true,
-    children
+    children,
+    onClick
 }) => {
 
     return (
         <Button
             className={className}
+            onClick={onClick}
         >
             {text}
             {children}

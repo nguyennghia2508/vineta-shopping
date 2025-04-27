@@ -57,9 +57,29 @@ const TopBar: React.FC = () => {
               <ul className="tf-social-icon topbar-left flex flex-wrap gap-[8px]">
                 {socialLinks.map((social, index) => (
                   <li key={index}>
-                    <a href={social.href} className={
-                      `social-item w-[28px] h-[28px] flex items-center justify-center text-white text-[12px] rounded-full border border-[var(--line)] bg-transparent transition-all duration-300
-                      ${social.className}`}>
+                    <a href={social.href}
+                      className={
+                        `social-item
+                          hover:text-(--primary)
+                          hover:border-(--primary)
+                          focus:outline-none
+                          focus:ring-0
+                          focus:shadow-none
+                          w-[28px] 
+                          h-[28px] 
+                          flex 
+                          items-center 
+                          justify-center 
+                          text-white 
+                          text-[12px] 
+                          rounded-full 
+                          border 
+                          border-[var(--line)] 
+                          bg-transparent 
+                          transition-all 
+                          duration-300
+                          ${social.className}`}
+                    >
                       <FontAwesomeIcon icon={social.icon} />
                     </a>
                   </li>
@@ -68,7 +88,7 @@ const TopBar: React.FC = () => {
             </div>
           </div>
           <div className="topbar-advert overflow-hidden">
-            <div className="topbar-center-wrapper flex items-center animate-infinite-scroll duration-300">
+            <div className="topbar-center-wrapper hover:[animation-play-state:paused] flex items-center animate-infinite-scroll duration-300">
               <div className="initial-child-container flex flex-[0_0_auto] flex-row items-center min-w-auto">
                 {repeatedMessages.map((msg, index) => (
                   <React.Fragment key={index}>

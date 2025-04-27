@@ -14,12 +14,14 @@ const TabsCustom: React.FC<TabProps> = ({
 }) => {
 
     return (
-        <Tabs
-            className={className}
-            defaultActiveKey="1"
-            items={data}
-        >
-        </Tabs>
+        <div className='container px-[24px] w-full max-w-[1488px] mx-auto'>
+            <Tabs
+                className={className}
+                defaultActiveKey="1"
+                items={data}
+            >
+            </Tabs>
+        </div>
     );
 };
 
